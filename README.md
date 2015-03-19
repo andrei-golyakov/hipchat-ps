@@ -1,25 +1,26 @@
 #hipchat-ps
-The hipchat-ps module is inspired by HipChat's [hipchat-cli](https://github.com/hipchat/hipchat-cli) but wraps up the functionality to send a HipChat message in an easy to use Windows PowerShell module. 
+The hipchat-ps module to send a HipChat room notifications using Windows PowerShell.
+This module is working with HipChat API v2 https://www.hipchat.com/docs/apiv2.
 
 ## Getting Started
-1. Copy this module to any location found in $env:PSModulePath
-1. Import the module
+#. Copy this module to any location found in $env:PSModulePath
+#. Import the module
 
 	C:\PS>Import-Module Publish-HipChatRoomMessage
-	
-1. List available functions	
 
-		C:\PS>Get-Command -Module Publish-HipChatRoomMessage
-	
-1. Get help on the module
+#. List available functions
 
-		C:\PS>Get-Help Publish-HipChatRoomMessage -examples
-	
-		C:\PS>Get-Help Publish-HipChatRoomMessage -detailed
-	
-1. Execute the module
+		C:\PS>Get-Command -Module Publish-HipChatRoomNotification
 
-		C:\PS>Publish-HipChatRoomMessage -apitoken e6b4ed16569cb86d272692171d5 5c8 -roomid 49459 -from "lloyd" -message "Test Message http://www.google.com"		
+#. Get help on the module
+
+		C:\PS>Get-Help Publish-HipChatRoomNotification -examples
+
+		C:\PS>Get-Help Publish-HipChatRoomNotification -detailed
+
+#. Execute the module
+
+		C:\PS>Publish-HipChatRoomNotification -authToken "AUTH_TOKEN" -roomIdOrName "ROOM_ID_OR_NAME" -message "<div><a href=""#"">HTML link</a> example.</div>"
 
 ## Disclaimer
-NO warranty, expressed or written
+NO warranty, expressed or written.
